@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nom du Site - E-commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .scroll-categories {
+      overflow-x: auto;
+      white-space: nowrap;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+    .scroll-categories .category {
+      display: inline-block;
+      margin: 0 10px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .scroll-categories .category:hover {
+      background: #0d6efd;
+      color: #fff;
+    }
+    .section-title {
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+    .card-product {
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .card-product:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .badge-nouveau {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: #0d6efd;
+      color: #fff;
+      font-size: 0.8rem;
+      padding: 0.4em 0.8em;
+      border-radius: 0.5rem;
+      z-index: 2;
+    }
+    .bg-gradient {
+      background: linear-gradient(90deg, #f8fafc 0%, #e0e7ff 100%);
+    }
+    .card-img-top{
+        height: 200px;
+        
+        text-align: center;
+    }
+    .col-md-4{
+        width: 300px;
+    }
+    .g-4{margin-left: 30px;}
+ 
+        
+  </style>
+</head>
+<body class="bg-gradient">
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Aventis</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Produits</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Catégories</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Vêtements</a></li>
+              <li><a class="dropdown-item" href="#">Électronique</a></li>
+              <li><a class="dropdown-item" href="#">Beauté</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Connexion</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="welcome-section py-5 mb-4" style="background: linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%); border-radius: 1rem;">
+  <div class="container">
+    <div class="row align-items-center flex-column-reverse flex-md-row">
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="display-4 fw-bold mb-3 text-primary">Bienvenue sur <span class="text-success">Aventis</span></h1>
+        <p class="lead mb-4">Découvrez les dernières tendances, nouveautés et produits favoris à prix imbattables.<br>
+        Profitez d’une expérience shopping moderne, rapide et sécurisée !</p>
+        <a href="#produits-favoris" class="btn btn-success btn-lg px-4">Voir nos produits</a>
+      </div>
+      <div class="col-md-6 mb-4 mb-md-0 text-center">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=500&q=80" alt="Shopping moderne" class="img-fluid rounded shadow" style="max-height: 320px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <div class="scroll-categories bg-white py-3 px-4 mx-auto container mb-4">
+    <span class="category btn btn-outline-primary">Vêtements</span>
+    <span class="category btn btn-outline-primary">Électronique</span>
+    <span class="category btn btn-outline-primary">Beauté</span>
+    <span class="category btn btn-outline-primary">Maison</span>
+    <span class="category btn btn-outline-primary">Accessoires</span>
+    <span class="category btn btn-outline-primary">Sport</span>
+    <span class="category btn btn-outline-primary">Jeux</span>
+    <span class="category btn btn-outline-primary">Livres</span>
+  </div>
+
+
+  <section class="container my-5">
+    <h2 class="section-title text-center text-primary">Tendances</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card card-product position-relative">
+          <img src="montre-intelligente-image-realiste-noir_1284-11873.avif" class="card-img-top" alt="Produit tendance 1">
+          <div class="card-body">
+            <h5 class="card-title">Montre Connectée</h5>
+            <p class="card-text">Gardez le rythme avec style et technologie.</p>
+            <a href="#" class="btn btn-outline-primary">Voir</a>
+            <a href="" id="buy">buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-product position-relative">
+          <img src="nature-morte-ecouteurs-cyberpunk-sans-fil_23-2151072227.avif" class="card-img-top" alt="Produit tendance 2">
+          <div class="card-body">
+            <h5 class="card-title">Casque Audio</h5>
+            <p class="card-text">Un son immersif pour tous vos moments.</p>
+            <a href="#" class="btn btn-outline-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-product position-relative">
+          <img src="chaussures_1203-8153.avif" class="card-img-top" alt="Produit tendance 3">
+          <div class="card-body">
+            <h5 class="card-title">Chaussures Sport</h5>
+            <p class="card-text">Confort et performance pour vos activités.</p>
+            <a href="#" class="btn btn-outline-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-product position-relative">
+          <img src="montre-intelligente-image-realiste-noir_1284-11873.avif" class="card-img-top" alt="Produit tendance 1">
+          <div class="card-body">
+            <h5 class="card-title">Montre Connectée</h5>
+            <p class="card-text">Gardez le rythme avec style et technologie.</p>
+            <a href="#" class="btn btn-outline-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Section Nouveautés -->
+  <section class="container my-5">
+    <h2 class="section-title text-center text-success">Nouveautés</h2>
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <div class="card card-product position-relative h-100">
+          <span class="badge-nouveau">Nouveau</span>
+          <img src="vecteur-grand-sac-dos-voyage-vert-vue-avant-laterale-isole-fond-blanc_1284-45484.avif" class="card-img-top" alt="Nouveau produit 1">
+          <div class="card-body">
+            <h5 class="card-title">Sac à Dos Urbain</h5>
+            <p class="card-text">Pratique et élégant pour la vie quotidienne.</p>
+            <a href="#" class="btn btn-outline-success">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card card-product position-relative h-100">
+          <span class="badge-nouveau">Nouveau</span>
+          <img src="lunettes-monture-legerement-arrondie_23-2150670741.avif" class="card-img-top" alt="Nouveau produit 2">
+          <div class="card-body">
+            <h5 class="card-title">Lunettes de Soleil</h5>
+            <p class="card-text">Protégez vos yeux avec style.</p>
+            <a href="#" class="btn btn-outline-success">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card card-product position-relative h-100">
+          <span class="badge-nouveau">Nouveau</span>
+          <img src="led-lamps-transparent-set_1284-8816.avif" class="card-img-top" alt="Nouveau produit 3">
+          <div class="card-body">
+            <h5 class="card-title">Lampe LED Design</h5>
+            <p class="card-text">Éclairez votre intérieur avec modernité.</p>
+            <a href="#" class="btn btn-outline-success">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="card card-product position-relative h-100">
+          <span class="badge-nouveau">Nouveau</span>
+          <img src="led-lamps-transparent-set_1284-8816.avif" class="card-img-top" alt="Nouveau produit 4">
+          <div class="card-body">
+            <h5 class="card-title">Lampe LED Design</h5>
+            <p class="card-text">Éclairez votre intérieur avec modernité.</p>
+            <a href="#" class="btn btn-outline-success">Voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Produits Favoris -->
+  <section class="container my-5" id="produits-favoris">
+    <h2 class="section-title text-center text-secondary">Produits Favoris</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card card-product h-100">
+          <img src="jeu-ludo-sous-differentes-perspectives_23-2148705746.avif" class="card-img-top" alt="Produit 1">
+          <div class="card-body">
+            <h5 class="card-title">jeu ludo</h5>
+            <p class="card-text">Jeu a jouer entre amies</p>
+            <a href="#" class="btn btn-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-product h-100">
+          <img src="livre-realiste-presentation-couverture_1310-24.avif" class="card-img-top" alt="Produit 2">
+          <div class="card-body">
+            <h5 class="card-title">livre</h5>
+            <p class="card-text">life of the candle</p>
+            <a href="#" class="btn btn-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-product h-100">
+          <img src="lit-tapisse-beige-luxe-matelas-oreillers_191095-79853.avif" class="card-img-top" alt="Produit 3">
+          <div class="card-body">
+            <h5 class="card-title">matelas</h5>
+            <p class="card-text"> Matelas peb</p>
+            <a href="#" class="btn btn-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-product h-100">
+          <img src="main-tenant-pantalon-beige-brun-clair_23-2150756278.avif" class="card-img-top" alt="Produit 4">
+          <div class="card-body">
+            <h5 class="card-title">Pantalons</h5>
+            <p class="card-text">  Pantalons pour homme</p>
+            <a href="#" class="btn btn-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-product h-100">
+          <img src="conception-t-shirt-marathon-folie-minuit-monochrome_742173-5733.avif" class="card-img-top" alt="Produit 5">
+          <div class="card-body">
+            <h5 class="card-title">T shirt</h5>
+            <p class="card-text">t shirt homme</p>
+            <a href="#" class="btn btn-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-product h-100">
+          <img src="chemise-polo-noire-masculine-point-vue-different_1409-2191.avif" class="card-img-top" alt="Produit 6">
+          <div class="card-body">
+            <h5 class="card-title">chemise</h5>
+            <p class="card-text">chemise</p>
+            <a href="#" class="btn btn-primary">Voir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Contact</h5>
+          <p class="mb-1"><i class="bi bi-envelope"></i> contact@Aventis.com</p>
+          <p class="mb-1"><i class="bi bi-telephone"></i> +229 01 23 45 67 89</p>
+          <div class="mt-3">
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-twitter-x fs-4"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Livraison</h5>
+          <ul class="list-unstyled">
+            <li>Livraison rapide 24/48h</li>
+            <li>Suivi de commande</li>
+            <li>Retours gratuits 30j</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Paiement</h5>
+          <ul class="list-unstyled">
+            <li>Carte bancaire</li>
+            <li>PayPal</li>
+            <li>Apple Pay</li>
+            <li>Paiement sécurisé</li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="fw-bold mb-3">Adresse</h5>
+          <p>akpakpa<br>Cotonou<br>Benin</p>
+        </div>
+      </div>
+      <hr class="bg-secondary">
+      <div class="text-center small">
+        &copy; 2025 Aventis. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
